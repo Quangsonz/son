@@ -1,0 +1,413 @@
+    /* reset css */
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    header {
+        background-color:white; 
+        color: white;
+        padding: 10px;
+        
+    }
+    header nav ul{
+        background-color: snow;
+        padding: auto;
+    }
+
+    header nav ul {
+        list-style-type: none;
+        margin:0;
+        padding-left: 200px;
+        display: flex;
+        align-items: center;
+        background-color:white;
+        color: white;
+        font-weight: bold;
+        height: 88px;
+        line-height: 102px;
+    }
+
+    header nav li {
+        margin-right: 20px;
+        position: relative;
+    }
+    header nav a {
+        color: black;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        font-size: 19px;
+    }
+    /* Hiệu ứng nổi */
+    header nav li a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px; 
+        bottom: 0;
+        left: 0;
+        background-color: rgb(43, 43, 36);
+        visibility: hidden; /* Ẩn ban đầu */
+        transform: scaleX(0); /* Scale chiều rộng về 0 để ẩn */
+        transition: transform 0.2s ease, visibility 0s linear 0.1s; /* Hiệu ứng mượt mà */
+    }
+
+    header nav li a:hover::before {
+        visibility: visible; /* Hiển thị thanh nổi */
+        transform: scaleX(1); /* Scale chiều rộng về 1 để hiển thị */
+    }
+    .header1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        display: flex;
+        justify-content: space-between; /* Căn giữa ngang */
+        align-items: center; /* Căn giữa dọc */
+        background-color: #fff;
+        padding: 10px;
+        transition: 0.3s;
+    }
+
+    .header1 img {
+        border-radius: 12px;
+        height: 78px;
+        width: 78px;
+        margin: 0px 8px;
+    }
+
+    .header1 .actions {
+        margin-right: 20px;
+        display: flex; /* Hiển thị các biểu tượng trên cùng một dòng */
+        align-items: center; /* Căn giữa dọc */
+        margin: 0 200px 0 0 ;
+    }
+
+    .header1 .actions a {
+        margin-left: 10px;
+    }
+
+    .header1 .actions img {
+        height: 35px;
+        width: 35px;
+    }
+    /* Lớp sticky */
+    .sticky {
+        top: 0;
+    }
+    /* Style cho container */
+    .container {
+        position: relative; /* Đặt vị trí tương đối */
+        top: 88px; /* Khoảng cách từ top của header */
+        background-color: #d87e7e;
+        padding: 24px;
+        text-align: center;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Thêm hiệu ứng nổi */
+        transition: transform 0.3s;
+    }
+    .container input[type="text"] {
+        padding: 12px;
+        width: 60%; /* Thay đổi kích thước của ô nhập tại đây */
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .container button {
+        padding: 12px 24px;
+        background-color: #e48227;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .container button:hover {
+        background-color: #060606;
+    }
+    .slider-container {
+        margin-top: 20px; /* Dịch slider xuống dưới container */
+        position: absolute;
+        top: 174.4px; /* Di chuyển xuống dưới container */
+        width: 100%;
+        overflow: hidden;
+        z-index: 1; /* Đảm bảo slider hiển thị trên container */
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .slide {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .menu {
+        position: relative;
+        background-color: #fff;
+        padding: 20px 250px;
+        top: 542px;
+        min-height: 524px;
+        border-radius: 5px;
+        margin-top: 20px; /* Khoảng cách giữa phần menu và phần trên cùng của trang */
+        margin-bottom: 20px; /* Khoảng cách giữa phần menu và phần dưới cùng của phần trên nếu có */
+        z-index: 2;
+    }
+
+    .menu h2 {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 24px;
+        text-align: center;
+        position: relative; /* Đặt vị trí tương đối */
+    }
+
+    .menu h2::before,
+    .menu h2::after {
+        content: ""; /* Chỉ cần một nội dung trống */
+        position: absolute;
+        top: 50%; /* Đặt vị trí ở giữa theo chiều dọc */
+        width: 280px; /* Chiều rộng của đường gạch */
+        height: 1px; /* Chiều cao của đường gạch */
+        background-color: black; /* Màu sắc của đường gạch */
+    }
+
+    .menu h2::before {
+        left: 0; /* Đặt đường gạch bên trái */
+        transform: translate(10%, -50%); /* Dịch đường gạch sang trái */
+    }
+
+    .menu h2::after {
+        right: 0; /* Đặt đường gạch bên phải */
+        transform: translate(-10%, 50%); /* Dịch đường gạch sang phải */
+    }
+    .rainbow-text {
+        background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbow-animation 1S infinite; /* Thời gian và hiệu ứng lặp lại */
+    }
+
+    @keyframes rainbow-animation {
+        0% {background-position: 0% 50%}
+        50% {background-position: 100% 50%}
+        100% {background-position: 0% 50%}
+    }
+    .menu-items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .item {
+        position: relative;
+        width: 234.21px;
+        height: 234.29px;
+        margin: 10px;
+        overflow: hidden; /* Ẩn phần dư thừa của ảnh */
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng khi hover */
+    }
+
+    .item:hover {
+        transform: scale(1.1); /* Phóng to ảnh khi hover */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Hiệu ứng nổi khi hover */
+    }
+
+    .item img {
+        width: 234.21px;
+        height: 190.29px;
+        display: block;
+        border-radius: 5px;
+        transition: transform 0.3s; /* Hiệu ứng khi hover */
+    }
+
+    .item:hover img {
+        transform: scale(1.0); /* Phóng to ảnh khi hover */
+    }
+
+    .item a {
+        text-decoration: none;
+        color: #333;
+    }
+    .item h3{
+        text-align: center;
+        margin-top: 20px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    .item .item-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.8); /* Màu nền với độ mờ */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .item .item-info h3 {
+        margin: 0;
+        text-align: center;
+        color: black;
+    }
+    .menu-slider {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .menu-items2 {
+        display: flex;
+        width: 300%; /* Số lượng mục menu nhân với 100% để tạo hiệu ứng trượt */
+        transition: transform 0.5s ease; /* Hiệu ứng trượt */
+        
+    }
+
+    .item2 {
+        position: relative;
+        width: 290px;
+        height: 410px;
+        margin: 10px 20px;
+        overflow: hidden; /* Ẩn phần dư thừa của ảnh */
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng khi hover */
+    }
+    
+    .item2 img{
+        width: 100%;
+        height: 78%;
+        display: block;
+        border-radius: 5px;
+        transition: transform 0.3s; /* Hiệu ứng khi hover */
+    }
+    .item2 a {
+        text-decoration: none;
+        text-align: center;
+        color: #060606;
+        padding: 85px;
+    }
+    .item2 p {
+        display: block; /* Đảm bảo rằng thẻ p sẽ được hiển thị */
+        color: #333; /* Màu văn bản */  
+        font-size: 15px; /* Cỡ chữ */
+        text-align: inherit;
+        padding: 10px 10px;
+    }
+    .item2 h3{
+        border-radius: 25px;
+        background-color: #cccc;
+        width: 100px;
+        height: 30px;
+        margin: 0 85px;
+        margin-top: -20px;
+        line-height: 30px;
+    }
+    .item2 img:hover{
+        transform: scale(1.05); /* Phóng to ảnh khi hover */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Hiệu ứng nổi khi hover */
+    }
+    .item2 h3:hover{
+        color: #fff;
+        background-color: #333;
+    }
+    /* .more{
+        background-color: white;
+
+    } 
+    .menu-slider .more a{
+        text-decoration: none;
+        background-color: aqua;
+        border-radius: 20px;
+        width: 20px;
+        height: 50px;
+        margin: 20px 45%;
+    } */
+    /* CSS cho phần footer */
+    footer {
+        background-color: #f4f4f4;
+        padding: 20px 0;
+        position: relative; /* Đảm bảo các phần tử con có vị trí tương đối */
+        top: 32rem;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .footer-left {
+        background-color: #f4f4f4;
+        padding: 20px;
+        padding-top: 0;
+        border-radius: 5px;
+        flex: 1; /* Phần tử sẽ mở rộng theo chiều ngang */
+        margin-right: 10px; /* Để tạo khoảng cách giữa các phần tử */
+    }
+    .footer-left h3{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .footer-left p{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .footer-right {
+        flex: 1; /* Phần tử sẽ mở rộng theo chiều ngang */
+    }
+    
+    .footer-right h3 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .footer-right ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer-right ul li {
+        margin-bottom: 5px;
+    }
+    
+    .footer-right ul li a {
+        color: #333;
+        text-decoration: none;
+    }
+    
+    .footer-right ul li a:hover{   
+        text-decoration: underline;
+        color: #e48227;
+        
+    }
+    .footer-right .right-content {
+        display: flex;
+        flex-direction:row;
+    }
+    
+    .footer-right .right-content img {
+        margin-right: 30%;
+        width: 30%; /* Thay đổi kích thước ảnh theo nhu cầu */
+        height: auto;
+        align-items: left;
+        
+    }
+    .footer-bottom {
+        text-align: center;
+        margin-bottom: -18px;
+        border-top: 1px solid #ddd;
+        color: #333;
+        background-color: #e36060bf;
+    }
+    .footer-bottom p{
+        line-height: 39px;
+    }
+    

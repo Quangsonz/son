@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:ital,wgth@0,400;0,500;0,600;1,200;1,400;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Popins',sans-serif;
+    cursor: pointer;
+}
+#wrapper{
+    width: 100%;
+    height: 100vh;
+}
+#header{
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.logo img{
+    height: 78px;
+    width: 78px;
+    margin-left: 40px;
+}
+#menu{
+    list-style: none;
+    display: flex;
+}
+
+#menu .item{
+    margin: 0 10px;
+}
+
+#menu .item a {
+    color: #333;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+#actions{
+    display: flex;
+    padding-right: 33px;
+}
+#actions .item{
+    margin-left: 23px;
+}
+.item img{
+    height: 50px;
+    width: 50px;
+}
+#banner{
+    width: 100%;
+    background-image: url("banner.png");
+    background-size: cover;
+    height: 534px;
+    margin-top: 10px;
+    display: flex;
+    padding: 0 133px;
+    position: relative;
+}
+#banner .box-left ,#banner .box-right{
+    width: 50%;
+}
+#banner .box-left h2 {
+    font-size: 48px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+#banner .box-left button{
+    width: 191px;
+    height: 40px;
+    margin-top: 300px;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #333;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+#banner .box-left button:hover{
+    color: #fff;
+    background-color: #333;
+}
+#banner .box-right {
+    padding-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#banner .box-right img{
+    width: 45%;
+    height: 70%;
+    margin: 0 10px;
+    border-radius: 60px;
+    animation: animation 1.5s infinite linear;
+}
+#banner .box-right img:nth-child(1){
+    animation-delay: 0.5s;
+}
+#banner .box-right img:nth-child(2){
+    animation-delay: 1s;
+}
+@keyframes animation{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.to-bottom{
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.to-bottom img{
+    width: 50px;
+    height: 50px;
+    box-shadow: #92948d;
+}
+.menu2 {
+    position: relative;
+    background-color: #fff;
+    padding: 20px 250px;
+    min-height: 524px;
+    border-radius: 5px;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    z-index: 2;
+}
+
+.menu2 h2 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+    position: relative; 
+}
+
+.menu2 h2::before,
+.menu2 h2::after {
+    content: ""; 
+    position: absolute;
+    top: 50%; 
+    width: 280px; /* Chiều rộng của đường gạch */
+    height: 1px; /* Chiều cao của đường gạch */
+    background-color: black; /* Màu sắc của đường gạch */
+}
+
+.menu2 h2::before {
+    left: 0; /* Đặt đường gạch bên trái */
+    transform: translate(10%, -50%); /* Dịch đường gạch sang trái */
+}
+
+.menu2 h2::after {
+    right: 0; /* Đặt đường gạch bên phải */
+    transform: translate(-10%, 50%); /* Dịch đường gạch sang phải */
+}
+.rainbow-text {
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-animation 1S infinite; /* Thời gian và hiệu ứng lặp lại */
+}
+
+@keyframes rainbow-animation {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item2 {
+    position: relative;
+    width: 234.21px;
+    height: 234.29px;
+    margin: 10px;
+    overflow: hidden; /* Ẩn phần dư thừa của ảnh */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng khi hover */
+}
+
+.item2:hover {
+    transform: scale(1.1); /* Phóng to ảnh khi hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Hiệu ứng nổi khi hover */
+}
+
+.item2 img {
+    width: 234.21px;
+    height: 190.29px;
+    display: block;
+    border-radius: 5px;
+    transition: transform 0.3s; /* Hiệu ứng khi hover */
+}
+
+.item2:hover img {
+    transform: scale(1.0); /* Phóng to ảnh khi hover */
+}
+
+.item2 a {
+    text-decoration: none;
+    color: #333;
+}
+.item2 h3{
+    text-align: center;
+    margin-top: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.item2 .item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Màu nền với độ mờ */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.item2 .item-info h3 {
+    margin: 0;
+    text-align: center;
+    color: black;
+}
