@@ -6,6 +6,10 @@
     font-family: 'Popins',sans-serif;
     cursor: pointer;
 }
+body {
+    padding-top: 100px;
+    min-height: 100vh; /* Đảm bảo body cao hơn footer */
+}
 #wrapper{
     width: 100%;
     height: 100vh;
@@ -17,12 +21,49 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
-    background-color: white; /* Thêm màu nền để đảm bảo nó nhìn thấy được */
-    position: fixed; /* Làm cho header cố định */
-    top: 0; /* Căn nó lên phía trên */
-    left: 0; /* Căn nó sang trái */
-    z-index: 1000; /* Đảm bảo nó nằm trên các phần tử khác */
+    background-color: white;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #222121;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.form-content {
+    display: flex;
+    text-align: left;
+    margin-left: 20px; 
+}
+
+.form-content p {
+    font-size: 16px;
+    padding: 10px 10px;
+    color: white;
+}
+
+.form-content a {
+    margin-left: 20px;
+    text-decoration: none; 
+    color: white;
+    background-color: #ed1c1c;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+.form-content a:hover {
+    background-color: #e05040;
 }
 .logo img{
     height: 78px;
@@ -68,10 +109,7 @@
 #actions .item{
     margin-left: 23px;
 }
-.item img{
-    height: 50px;
-    width: 50px;
-}
+
 body {
     padding-top: 100px; /* Điều chỉnh giá trị này dựa trên chiều cao của header */
 }
@@ -258,6 +296,8 @@ body {
 }
 .slider-wrapper{
     position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 .slider-wrapper .slide-button{
     position:absolute;
@@ -298,8 +338,13 @@ body {
 }
 .slider-wrapper .img-list .img-item{
     width: 290px;
-    height: 410px;
+    height: 300px;
     object-fit: cover;
+    transition: transform 0.3s;
+}
+.slider-wrapper .img-list .img-item:hover{
+    transform: scale(1.05); /* Phóng to ảnh khi hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 #wp-products .slider-scrollbar{
     height: 24px;
@@ -353,7 +398,7 @@ body {
     height: 440px;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 27px;
+    border-radius: 25px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -419,8 +464,8 @@ body {
     }
 
     .slider-wrapper .img-list .img-item{
-        width: 280px;
-        height: 380px;
+        width: 290px;
+        height: 292px;
     }
     .slider-scrollbar .scrollbar-thumb{
         width: 20%;
@@ -455,7 +500,6 @@ body {
     font-style: italic;
 }
 @media only screen and (max-width: 768px) {
-    /* Điều chỉnh các phần tử để phù hợp với màn hình nhỏ */
     #header {
         padding: 0 20px;
     }
@@ -463,7 +507,7 @@ body {
     .logo img {
         height: auto;
         max-width: 100%;
-        margin-left: 10px; /* Điều chỉnh khoảng cách theo nhu cầu */
+        margin-left: 10px;
     }
 
     #menu {
@@ -471,57 +515,54 @@ body {
     }
 
     #menu .item {
-        margin: 10px 0; /* Điều chỉnh khoảng cách theo nhu cầu */
+        margin: 10px 0; 
     }
 
     #menu .item a {
-        font-size: 14px; /* Điều chỉnh kích thước font chữ */
+        font-size: 14px; 
     }
 
     #actions {
-        padding-right: 20px; /* Điều chỉnh khoảng cách theo nhu cầu */
+        padding-right: 20px; 
     }
-
     .item img {
-        height: 40px; /* Điều chỉnh kích thước ảnh */
+        height: 40px; 
         width: 40px;
     }
 
     #banner {
-        padding: 0 10px; /* Điều chỉnh khoảng cách theo nhu cầu */
+        padding: 0 10px; 
     }
 
     .box-left h2 {
-        font-size: 24px; /* Điều chỉnh kích thước font chữ */
-        margin-top: 5px; /* Điều chỉnh khoảng cách theo nhu cầu */
+        font-size: 24px;
+        margin-top: 5px; 
     }
 
     .box-left button {
-        margin-top: 10px; /* Điều chỉnh khoảng cách theo nhu cầu */
+        margin-top: 10px; 
     }
 
     .menu2 {
-        padding: 20px 10px; /* Điều chỉnh khoảng cách theo nhu cầu */
+        padding: 20px 10px; 
     }
-
     .menu2 h2 {
-        font-size: 20px; /* Điều chỉnh kích thước font chữ */
+        font-size: 20px; 
     }
 
     .item2 {
-        width: 100%; /* Đảm bảo phần tử chiếm toàn bộ chiều rộng */
-        margin: 10px 0; /* Điều chỉnh khoảng cách theo nhu cầu */
+        width: 100%; 
+        margin: 10px 0;
     }
 
     .item2 img {
-        width: 100%; /* Đảm bảo ảnh hiển thị đầy đủ */
+        width: 100%; 
         height: auto;
     }
 
     .product-item {
-        width: 100%; /* Đảm bảo sản phẩm chiếm toàn bộ chiều rộng */
-        margin-bottom: 20px; /* Điều chỉnh khoảng cách theo nhu cầu */
-    }
+        width: 100%; 
+        margin-bottom: 20px; 
 
     .slider-wrapper .img-list {
         gap: 10px; /* Điều chỉnh khoảng cách theo nhu cầu */
@@ -531,41 +572,100 @@ body {
         width: 10px; /* Điều chỉnh kích thước thanh cuộn */
     }
 }
+
+}
 footer {
-    top: 1530px;
-    width: 100%;
+    position: absolute;
     background-color: #333;
-    color: #fff;
-    padding: 20px;
-    clear: both; /* Đảm bảo footer nằm bên dưới nội dung khác */
-    position: relative; /* Căn chỉnh footer */
-    bottom: 0;
-    left: 0; 
-    z-index: 20;  /* Đảm bảo footer nằm trên các phần tử khác */
+    padding: 30px 0;
+    color: #333;
+    top: 154rem;
+    font-family: Arial, sans-serif;
+    z-index: 1200; /* Đảm bảo nó nằm trên các phần tử khác */
+    bottom: 0; 
+    width: 100%; 
+    height: 400px;
 }
 
-.footer-container {
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 30px;
 }
 
-.footer-column {
-    flex: 1 1 200px;
-    margin-right: 20px;
+.col-md-4 {
+    flex: 1 1 300px;
+    margin-bottom: 30px;
+}
+.col-md-4 h2{
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+.col-md-4 .social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+.col-md-4 .social-links{
+    margin-top: 30px;
+}
+.social-links li {
+    margin-right: 10px;
 }
 
-.footer-column h3 {
+.social-links a {
+    color: #333;
+    font-size: 28px;
+    margin-left: 10px;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
     margin-bottom: 10px;
+    color: #ccc;
 }
-.footer-column ul li:hover{
-    color: #c0392b;
+.contact-info strong {
+    text-decoration: none;
+    color: #ccc;
 }
-.contact-info {
-    margin-top: 20px;
+.menu-list {
+    list-style: none;
+    padding: 0;
 }
 
-.contact-info {
-    margin-top: 20px;
+.menu-list li {
+    margin-bottom: 5px;
 }
 
+.menu-list a {
+    text-decoration: none;
+    color: #ccc;
+}
+ 
+.copyright {
+    text-align: center;
+    font-size: 14px;
+    color: aliceblue;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-4 {
+        flex: 1 1 100%;
+    }
+}
