@@ -1,0 +1,262 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: snow;   
+}
+
+header {
+    background-color:snow;
+    color: snow;
+    padding: 10px;
+    
+}
+
+
+header nav ul {
+    list-style-type: none;
+    margin:0;
+    padding-left: 200px;
+    display: flex;
+    align-items: center;
+    background-color:white;
+    color: white;
+    font-weight: bold;
+}
+
+header nav li {
+    margin-right: 20px;
+}
+header nav a {
+    color: black;
+    text-decoration: none;
+}
+.header1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;  
+    width: 100%;
+}
+.header1 img {
+    border-radius: 12px;
+    height: 60px;
+    width: 60px;
+}
+.nav-1 a button{
+    border-radius: 12px;
+}
+.nav-1{
+    position: sticky;
+    list-style-type:none;
+    /*margin-top:10px;*/
+    top: 60px;
+    padding: 10px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    background-color: black;
+    margin-bottom: 15px;
+    font-style: italic;
+    margin-left: -162px;
+    width: 1500px;
+    z-index: 1000;
+}
+.nav-1 ul{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+ 
+
+}
+.icon-sp{
+    margin-right: 5px;
+}
+
+.header1 .fa-user{
+    margin: 0 120px;
+}
+.icon1{
+    margin: 0 10px; /* Khoảng cách giữa các biểu tượng */
+  font-size: 24 px; /* Kích thước biểu tượng */
+  
+}
+
+.list1s{
+    padding-right: 40px;
+}
+.header1 a{
+    color: #333;
+    text-decoration: none;
+    padding-bottom: 5px; /* Thêm khoảng cách dưới đường gạch chân */
+    
+}
+.fa-user{
+    background-position: -10px -60px ;
+    width: 30px;
+    
+}
+.header1 .xr:hover{
+    border-bottom: 2px solid black;
+}
+main nav li {
+    margin-right: 20px;
+}
+.nav-2 ul{
+   
+    padding-top: 10px;
+    background-color: white; /* Màu nền xám nhạt */
+    padding: 10px;
+    margin-left: 40px;
+    text-align: center;
+    
+}
+.nav-2{
+    border-bottom: 1px solid #ccc;
+    color: white;
+    background-color:white;
+    width: 100%;
+    margin-top: 20px;
+    position: sticky;
+    top: 64px;
+    left: 160px;
+    z-index: 1000;
+}
+.hide {
+    display: none;
+}
+.nav-2 a {
+    color:black;
+    font-weight: bold;
+    
+    
+  }
+  .nav-2 a {
+    color: #333;
+    text-decoration: none;
+    padding-bottom: 5px; /* Thêm khoảng cách dưới đường gạch chân */
+    
+  }
+  
+  .nav-2 a:hover {
+    border-bottom: 2px solid #e63e2e; /* Hiển thị viền gạch chân màu đỏ khi hover */
+    color: black; /* Đổi màu chữ thành đen khi hover */
+    transform: scale(1.1);
+  }
+
+main nav button {
+    background-color: #e63e2e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+
+
+.menu-item{
+    display: inline-block;
+    background-color: snow;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    text-align: center;
+    border-radius: 12px;
+  
+}
+.menu-item img{
+    border-radius: 12px;
+}
+.menu-item button{
+    border-radius: 12px;
+    margin-bottom: 5px;
+}
+
+
+.menu-item img {
+    max-width: 200px;
+    height: none;
+    transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+}
+
+.menu-item:hover img {
+    transform: scale(1.07); /* Phóng to ảnh khi di chuột vào */
+}
+.menu-item h3 {
+    margin-top: 10px;
+}
+
+.menu-item p {
+    font-weight: bold;
+    color: #e63e2e;
+}
+
+.menu-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+    
+}
+
+.menu-item button {
+    background-color: #e63e2e;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    width: 1479px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    margin-bottom: 0;
+    margin-left:-160px;
+    margin-bottom: -23px;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+    margin-right: 20px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
