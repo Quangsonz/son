@@ -199,19 +199,19 @@ body {
     content: ""; 
     position: absolute;
     top: 50%; 
-    width: 280px; /* Chiều rộng của đường gạch */
-    height: 1px; /* Chiều cao của đường gạch */
+    width: 280px; 
+    height: 1px; 
     background-color: black; /* Màu sắc của đường gạch */
 }
 
 .menu2 h2::before {
-    left: 0; /* Đặt đường gạch bên trái */
+    left: 0; 
     transform: translate(10%, -50%); /* Dịch đường gạch sang trái */
 }
 
 .menu2 h2::after {
-    right: 0; /* Đặt đường gạch bên phải */
-    transform: translate(-10%, 50%); /* Dịch đường gạch sang phải */
+    right: 0; 
+    transform: translate(-10%, 50%); 
 }
 .rainbow-text {
     background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
@@ -235,15 +235,15 @@ body {
     width: 234.21px;
     height: 234.29px;
     margin: 10px;
-    overflow: hidden; /* Ẩn phần dư thừa của ảnh */
+    overflow: hidden; 
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng khi hover */
+    transition: transform 0.3s, box-shadow 0.3s; 
 }
 
 .item2:hover {
-    transform: scale(1.1); /* Phóng to ảnh khi hover */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Hiệu ứng nổi khi hover */
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
 }
 
 .item2 img {
@@ -251,11 +251,11 @@ body {
     height: 190.29px;
     display: block;
     border-radius: 5px;
-    transition: transform 0.3s; /* Hiệu ứng khi hover */
+    transition: transform 0.3s; 
 }
 
 .item2:hover img {
-    transform: scale(1.0); /* Phóng to ảnh khi hover */
+    transform: scale(1.01); 
 }
 
 .item2 a {
@@ -340,7 +340,7 @@ body {
     transition: transform 0.3s;
 }
 .slider-wrapper .img-list .img-item:hover{
-    transform: scale(1.05); /* Phóng to ảnh khi hover */
+    transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 #wp-products .slider-scrollbar{
@@ -404,24 +404,13 @@ body {
     width: 100%;
     height: 70%;
 }
-.img-item {
-    width: 100%;
-    height: 70%; /* 7/10 phần trên là ảnh */
-    object-fit: cover;
-}
 
-.product-info {
-    padding: 10px;
-    height: 30%; /* 3/10 phần dưới là thông tin sản phẩm */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
 .product-name {
     text-align: center;
     font-size: 16px;
     font-weight: bold;
+    margin-top: 7px;
 }
 
 .product-description {
@@ -441,6 +430,7 @@ body {
 
 .add-to-cart {
     padding: 8px;
+    margin-bottom: 10px;
     width: 40%;
     margin-left: 80px;
     background-color: #e74c3c;
@@ -451,6 +441,12 @@ body {
     text-align: center;
 }
 @media (max-width: 1023px){
+    #wp-products{
+        margin: 0 20px; 
+        max-width: 100%; 
+        margin-bottom: 20px;
+    }
+
     .slider-wrapper .slide-button{
         display: none!important;
     }
@@ -461,12 +457,14 @@ body {
     }
 
     .slider-wrapper .img-list .img-item{
-        width: 290px;
-        height: 292px;
+        width: 100%; 
+        height: auto; 
     }
+
     .slider-scrollbar .scrollbar-thumb{
-        width: 20%;
+        width: 40%;
     }
+
 }
 .add-to-cart:hover {
     background-color: #c0392b;
@@ -496,80 +494,150 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-style: italic;
 }
-@media only screen and (max-width: 768px) {
-    #header {
-        padding: 0 20px;
-    }
 
+@media only screen and (max-width: 768px) {
+    /* Header */
+    #header  {
+        padding: 0 10px;
+        height: 100px; 
+    }
     .logo img {
         height: auto;
-        max-width: 100%;
-        margin-left: 10px;
+        max-width: 100%; /* Điều chỉnh logo cho phù hợp */
+        margin-left: 30px;
     }
 
     #menu {
-        flex-wrap: wrap;
-    }
-
-    #menu .item {
-        margin: 10px 0; 
-    }
-
-    #menu .item a {
-        font-size: 14px; 
+        display: none;
+        flex-direction: column; /* Sắp xếp menu theo cột */
+        align-items: flex-start; /* Căn chỉnh menu về bên trái */
     }
 
     #actions {
-        padding-right: 20px; 
-    }
-    .item img {
-        height: 40px; 
-        width: 40px;
+        padding-right: 10px; 
+        flex-direction:row; 
+        align-items: center;
+        margin-right: 35px;
     }
 
+    #actions .item {
+        margin: 10px 0 ; 
+    }
+
+    #actions .item img {
+        height:30px; 
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    /* Banner */
     #banner {
         padding: 0 10px; 
+        flex-direction: column;
+        height: 50%; 
     }
 
-    .box-left h2 {
-        font-size: 24px;
-        margin-top: 5px; 
+    #banner .box-left {
+        width: 100%;
+        text-align: center;
     }
 
-    .box-left button {
+    #banner .box-left h2 {
+        display: none;
+    }
+
+    #banner .box-left button {
         margin-top: 10px; 
+    }
+
+    #banner .box-right {
+        width: 50%;
+        padding-left: 0;
+        display:flex; 
+        margin-top: 150px;
+        margin-left: 115px;
+    }
+    
+    #banner .box-right img {
+        width: 50%; 
+        height: auto;
     }
 
     .menu2 {
         padding: 20px 10px; 
+        flex-direction: column;
     }
+
     .menu2 h2 {
         font-size: 20px; 
+        text-align: center; 
+    }
+    .menu2 h2::before,
+    .menu2 h2::after{
+        display: none;
+    }
+    .menu-items {
+        flex-direction:row;
     }
 
     .item2 {
-        width: 100%; 
+        width: 50%; 
         margin: 10px 0;
+
     }
 
     .item2 img {
         width: 100%; 
         height: auto;
     }
-
-    .product-item {
+    .item2:hover {
+        transform: scale(1.01); 
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    }
+    /* Sale-off */
+    #sale-off .box {
+        width: 0%;
+    }
+    footer {
+        position: relative; /* Loại bỏ fixed để footer nằm theo nội dung */
+        top: 0; 
+        z-index: auto; 
+        bottom: auto;
+        margin-top: -185px  ;
         width: 100%; 
-        margin-bottom: 20px; 
-
-    .slider-wrapper .img-list {
-        gap: 10px; /* Điều chỉnh khoảng cách theo nhu cầu */
+        height: 1000px; 
     }
 
-    .slider-scrollbar .scrollbar-thumb {
-        width: 10px; /* Điều chỉnh kích thước thanh cuộn */
+    .container {
+        padding: 15px; 
     }
-}
 
+    .row {
+        flex-direction: column; 
+    }
+
+    .col-md-4 {
+        margin-bottom: 15px; 
+    }
+
+    .col-md-4 .social-links {
+        margin-top: 15px; 
+    }
+
+    .social-links li {
+        margin-right: 5px;
+    }
+
+    .social-links a {
+        font-size: 20px; 
+    }
+    .container{
+        background-color: #333;
+    }
+    .copyright{
+        background-color: #333;
+        height: 30px;
+    }
 }
 footer {
     position: absolute;
@@ -594,7 +662,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 30px;
 }
 
 .col-md-4 {
@@ -649,14 +716,13 @@ footer {
     text-decoration: none;
     color: #ccc;
 }
- 
+
 .copyright {
     text-align: center;
     font-size: 14px;
     color: aliceblue;
 }
 
-/* Responsive */
 @media screen and (max-width: 768px) {
     .row {
         flex-direction: column;
@@ -812,4 +878,53 @@ label:hover{
     line-height: 75px;
     text-align: center;
     font-size: 17x;
+}
+
+#wrapper .cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100vh;
+    background-color: #ecf0f3;
+    padding: 12px 20px;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    overflow-y: scroll;
+    z-index: 2000;
+}
+.cart button{
+    margin-top: 20px;
+    height: 30px;
+    padding: 0 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    transition: all 0.3 ease;
+    background-color: tomato;
+    color: #fff;
+}
+.cart h2{
+    margin-bottom: 30px;
+    color: #c0392b;
+    font-size: 30px;
+}
+.cart table{
+    width: 100%;
+}
+.cart table thead th{
+    text-align: center;
+}
+.cart table tr td{
+    border-bottom: 1px solid #333;
+    padding: 12px 0;
+}
+#wrapper .cart .button-cart img{
+    cursor: pointer;
+}
+#wrapper .cart i{
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-right: 330px;
 }

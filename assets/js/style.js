@@ -24,7 +24,7 @@ const initSlider = () => {
 
         const handleMouseUp = () => {
             document.removeEventListener("mousemove", handleMouseMove);
-            document.removeEventListenerr("mouseup", handleMouseUp);
+            // document.removeEventListenerr("mouseup", handleMouseUp);
         }
         document.addEventListener("mousemove", handleMouseMove);
         document.addEventListener("mouseup", handleMouseUp);
@@ -58,6 +58,7 @@ const initSlider = () => {
     handleSlideButtons(); // Update button visibility on load
     updateScrollThumbPosition(); // Update scrollbar thumb position on load
 };
+
 
 window.addEventListener("load", initSlider);
 
