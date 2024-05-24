@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: navajowhite;
+    overflow: hidden; /* Ngăn việc cuộn trang trong quá trình hiệu ứng */
+  }
+  h1 {
+    animation: colorChange 5s infinite;
+  }
+  h2 {
+    color: red;
+  }
+  a button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  a button:hover {
+    cursor:pointer;
+  }
+  .box {
+    display: inline-block;
+    background-color: aquamarine;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 90px;
+    border-radius: 12px;
+    padding: 20px;
+    opacity: 0; /* Ẩn div ban đầu */
+    animation: dropDown 1s forwards; 
+  }
+  @keyframes dropDown {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+  @keyframes colorChange {
+    42.84% { color: green; }
+    57.12% { color: blue; }
+    71.4% { color: indigo; }
+    85.68% { color: violet; }
+    100% { color: green; }
+  }

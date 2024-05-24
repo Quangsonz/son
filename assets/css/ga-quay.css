@@ -8,7 +8,10 @@ body {
 header {
     background-color:snow;
     color: snow;
+    padding: 10px;
+    
 }
+
 #header{
     width: 100%;
     padding: 0 100px 8px;
@@ -109,14 +112,14 @@ header {
 .nav-1{
     position: sticky;
     list-style-type:none;
-    margin-top:10px;
+    margin-top:40px;
     top: 138px;
     padding: 10px;
     display: flex;
     color: white;
     justify-content: center;
     background-color: black;
-    margin-bottom: 4    5px;
+    margin-bottom: 15px;
     font-style: italic;
     margin-left: -162px;
     width: 1500px;
@@ -149,7 +152,7 @@ main nav li {
     z-index: 1000;
 }
 .nav-2 ul{
-    margin-top: 60px;
+    margin-top: 70px;
     padding: 10px;
     margin-left: 300px;
     text-align: center;
@@ -170,6 +173,32 @@ main nav li {
   .nav-2 a:hover {
     border-bottom: 2px solid #e63e2e; 
     color: black; 
+    transform: scale(1.1);
+  }
+
+main nav li {
+    margin-right: 20px;
+}
+
+.hide {
+    display: none;
+}
+.nav-2 a {
+    color:black;
+    font-weight: bold;
+    
+    
+  }
+  .nav-2 a {
+    color: #333;
+    text-decoration: none;
+    padding-bottom: 5px; /* Thêm khoảng cách dưới đường gạch chân */
+    
+  }
+  
+  .nav-2 a:hover {
+    border-bottom: 2px solid #e63e2e; /* Hiển thị viền gạch chân màu đỏ khi hover */
+    color: black; /* Đổi màu chữ thành đen khi hover */
     transform: scale(1.1);
   }
 
@@ -223,7 +252,17 @@ main {
     margin-bottom: 5px;
 }
 
-
+.old-price {
+    text-decoration: line-through; /* Strikethrough effect */
+    color: #ccc; /* Grayed out color */
+    margin-right: 5px; /* Add space between old and new prices */
+  }
+  
+  .price {
+    font-weight: bold;
+    font-size: 20px;
+    color: #e63e2e; /* Red color */
+  }
 .menu-item img {
     max-width: 200px;
     height: none;
@@ -411,7 +450,7 @@ header label{
     left: 86.5%;
     z-index: 2000;
     top: 34px;
-    font-size: 30px;
+    font-size: 29px;
     cursor: pointer;
 }
 #check{

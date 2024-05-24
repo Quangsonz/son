@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đặt Gà Rán</title>
+  <link rel="stylesheet" href="assets/css/ga_ran1.css">
+</head>
+<body>
+    <header>
+        <nav class="header1">
+            <ul>
+                <a href="Thucdon.html">
+                    <li> <img src="assets/img/logo.jpg" width="50px"  alt="Logo"></li>
+                </a>
+                <li class="xr"><a href="Thucdon.html">THỰC ĐƠN</a></li>
+                <li class="xr"><a href="Thucdon.html">KHUYẾN MÃI</a></li>
+                <li class="xr"><a href="#">DỊCH VỤ TIỆC</a></li>
+                <li class="xr"><a href="#">ƯU ĐÃI ĐẶC BIỆT</a></li>
+                <li class="icon1"><a href="#"><i class="fas fa-user"></i><img src="assets/img/Screenshot 2024-04-21 112248.png" style="width: 53px; height: 53px; margin-top: 5px;" ></a></li>
+                <li class="icon1"><a href="Thucdon.html"><i class="fas fa-shopping-cart"></i><img src="assets/img/Screenshot 2024-04-21 102053.png" style="width: 53px; height: 53px;"></a></li>
+                <li class="icon1"><a href="#"><i class="fas fa-bars"></i><img src="assets/img/Screenshot 2024-04-21 104426.png" style="width: 53px; height: 53px; margin-top: -5px;"></a></li> 
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="order-section" >
+            <h1>Đặt Hàng Ngay</h1>
+            <div class="order-form">
+                <label for="quantity" style="color:white;">Chọn số lượng:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+                <p style="color:white;" >Đơn giá: <span id="unit-price">65.000</span>đ</p>
+                <p style="color:white;">Tổng giá: <span id="total-price">65.000</span>đ</p>
+                <p style="color: white;">Gà Siêu Ngon - Ăn Là Nghiền </p>
+                <a href="Dathang.html"><button id="calculate-button">Đặt hàng</button></a>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="assets/img/shivangi-arora-kfc-15549698804472006495751.webp" alt="Fried Chicken" class="fried-chicken-image" style="height: 330px;width: 360px;">
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Danh mục món ăn ưu đãi</h3>
+                <ul>
+                    <li style="margin-right:120px ;">Gà mới</li>
+                    <li >Gà rán Tenders siêu cay</li>
+                    <li>Gà rán Tenders siêu cay</li>
+                    <li style="margin-right:50px ;">Gà rán siêu ngon</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Món mới</h3>
+                <ul>
+                    <li style="margin-right:130px ;"> Gà Quay</li>
+                    <li style="margin-right:85px ;"> Phi-lê Gà Quay</li>
+                    <li style="margin-right:110px ;"> Burger Tôm</li>
+                    <li style="margin-right:98px ;"> Burger Zinger</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Combo 1 người</h3>
+                <ul>
+                    <li style="margin-right:80px ;">Combo ăn trưa</li>
+                    <li style="margin-right:75px ;">Combo ăn sáng</li>
+                    <li style="margin-right:92px ;">Combo ăn tối</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Combo nhóm</h3>
+                <ul>
+                    <li style="margin-right:85px ;">Combo gia đình</li>
+                    <li style="margin-right:90px ;">Combo bạn bè</li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="contact-info">
+            <p style="margin-right:1400px ;">Liên hệ:</p>
+            <p style="margin-right:1150px ;">Địa chỉ: 123 Đường Lê Lợi, Thành phố mới</p>
+            <p style="margin-right:1290px ;">Điện thoại:0977096123</p>
+            <p style="margin-right:1230px ;">Email: np21062004@gmail.com</p>
+        </div>
+        
+    </footer>
+    <script>
+   document.getElementById('calculate-button').addEventListener('click', function() {
+      const unitPrice = 65000;
+      const quantity = parseInt(document.getElementById('quantity').value);
+      const totalPrice = unitPrice * quantity;
+
+      // Format the total price without the "đ" symbol
+      const formattedTotalPrice = totalPrice.toLocaleString('vi-VN').replace(/₫/g, '');
+
+      document.getElementById('total-price').innerText = formattedTotalPrice;
+    });
+
+    document.getElementById('quantity').addEventListener('input', function() {
+      const unitPrice = 65000;
+      const quantity = parseInt(document.getElementById('quantity').value);
+      const totalPrice = unitPrice * quantity;
+
+      // Format the total price without the "đ" symbol
+      const formattedTotalPrice = totalPrice.toLocaleString('vi-VN').replace(/₫/g, '');
+
+      document.getElementById('total-price').innerText = formattedTotalPrice;
+    });
+    const friedChickenImage = document.querySelector('.fried-chicken-image');
+
+friedChickenImage.addEventListener('click', function() {
+  this.classList.toggle('bounce');
+});
+
+    </script>
+</body>
+</html>

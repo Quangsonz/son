@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đặt Hàng</title>
+  <link rel="stylesheet" href="assets/css/Dathang.css">
+</head>
+<body>
+  <div class="box">
+    <h1>Đặt Hàng Thành Công </h1>
+    <h2>Cảm ơn quý khách</h2>
+    <a href="index2.html"><button>Quay về trang chủ</button></a>
+  </div>
+  
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      const addButtons = document.querySelectorAll('button');
+      addButtons.forEach(function(button) {
+        if (button.innerText.trim() === "Quay về trang chủ") {
+          button.addEventListener('mouseover', function() {
+            button.style.transform = 'scale(1.1)';
+            button.style.boxShadow = '0 0 10px rgba(128, 0, 128, 0.8)';
+          });
+          button.addEventListener('mouseout', function() {
+            button.style.transform = 'scale(1)';
+            button.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.2)';
+          });
+        }
+      });
+    });
+    window.addEventListener('DOMContentLoaded', function() {
+      const box = document.querySelector('.box');
+      box.classList.add('drop-down');
+    });
+  </script>
+</body>
+</html>
